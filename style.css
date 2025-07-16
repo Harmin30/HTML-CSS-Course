@@ -1,0 +1,53 @@
+* ,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+ul{
+    color: blueviolet;
+}
+ul a{
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+.nested{
+    color: rgb(255, 0, 247);
+}
+#last {
+    color: rgb(23, 159, 89);
+}
+ul ol li {
+    color: black;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: rgba(255, 228, 196, 0.724);
+    padding: 0.75rem
+}
+ul.nested > li {
+    border: 2px dotted blue;
+}
+ul >li~li{
+    border : 2px dotted rgb(114, 175, 221)
+}
+/* ul.nested > li ~li  {
+    border: 2px dotted blue;
+} */
+/* Using the attribute selectors,select all links to PDFs on the page 
+and put a (PDf) after it 
+Alternatively , make them your favourite color*/
+[href$=".pdf"]{
+     color: blue;
+}
+
+/*Elements , classes, Ids
+Groups of selectors
+Descendent selectors
+Parent-child
+Adjacent / general sibling
+Attribute Selectors.
+*/

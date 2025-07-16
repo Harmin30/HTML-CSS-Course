@@ -1,0 +1,143 @@
+/* Iceland's flag colors, from https://www.government.is/topics/governance-and-national-symbols/icelandic-national-flag/ */
+
+:root {
+  --sky-blue: #02529c;
+  --snow-white: #ffffff;
+  --fire-red: #dc1e35;
+  --radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fira Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+header {
+  text-align: center;
+  background-color: var(--sky-blue);
+}
+h1 {
+  margin-top: 0;
+  padding-top: 1rem;
+  color: var(--snow-white);
+}
+a {
+  color: var(--fire-red);
+}
+a:hover {
+  text-decoration: none;
+}
+address,
+cite {
+  font-style: normal;
+}
+nav ul {
+  background-color: var(--fire-red);
+  list-style-type: "🇮🇸 ";
+  padding: 0.5rem 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  border-top: 2px solid var(--snow-white);
+}
+nav a {
+  display: block;
+  color: var(--snow-white);
+  text-decoration: none;
+}
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+section {
+  display: flow-root;
+}
+
+aside {
+  background-color: var(--fire-red);
+  border-radius: var(--radius);
+}
+aside h3 {
+  margin: 0.5rem 0;
+  background-color: var(--snow-white);
+  border: 1px solid var(--fire-red);
+  border-radius: var(--radius) var(--radius) 0 0;
+  color: var(--fire-red);
+  padding: 0.2rem 0.5rem;
+  /* font-family: "Fira Sans", sans-serif; */
+}
+aside dl {
+  color: white;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+aside dt {
+  font-weight: bold;
+}
+aside dd {
+  margin: 0;
+}
+figure {
+  max-width: 512px;
+  width: 50%;
+  margin: 0;
+  float: right;
+  margin: 0 0 1rem 1rem;
+  background-color: var(--sky-blue);
+  border-radius: var(--radius);
+}
+figure img {
+  border-radius: var(--radius) var(--radius) 0 0;
+  max-width: 100%;
+}
+figcaption {
+  color: var(--snow-white);
+  padding: 1rem;
+}
+body > footer {
+  background-color: var(--sky-blue);
+  color: var(--snow-white);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  border-top: 15px double var(--fire-red);
+}
+body > footer a {
+  color: var(--snow-white);
+}
+/* article h2, article h3, article h4, article h5, article h6 {
+  font-family: 'PT Serif', serif;
+} */
+ /* :is() -- more specific */
+ /* :where() -- less specific  */
+article :is(h2, h3:not(aside h3), h4, h5, h6) {
+    font-family: 'PT Serif', serif;
+}
+article footer {
+  border: 1px double #000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+}
+ul:has(li:nth-child(6)) {
+  columns: 2;
+}
+ul:has(li:nth-child(11)) {
+  columns: 3;
+}
+a[href*="http"]::after {
+  content: url(https://en.wikipedia.org/w/skins/Vector/resources/common/images/external-link-ltr-icon.svg);
+}

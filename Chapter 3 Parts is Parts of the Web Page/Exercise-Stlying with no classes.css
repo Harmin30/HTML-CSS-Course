@@ -1,0 +1,18 @@
+/* Here are some possible starting values for fonts and colors. You may change them if you wish. The CodePen is linked to the specified Google fonts. If you change your font, you'll need to change the linked fonts as well. See the "Settings" button at the top right of the page to do this. */
+
+:root {
+  --creep: 'Creepster', cursive;
+  --regular-font: 'Source Sans Pro', sans-serif;
+  --red: #BF2C53;
+  --black: #00090D;
+  --ltgrey: #BFBFBF;
+  --dkgrey: #6E736F;
+  --yellow: #F2B90F;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

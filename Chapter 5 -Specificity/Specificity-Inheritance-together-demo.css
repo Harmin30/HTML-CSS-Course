@@ -1,0 +1,50 @@
+/* for each of the below styles, calculate the specificity of each selector. Then explain why the text affected by the styles looks the way it does. */ 
+/* 0-0-1 */
+footer {
+  color: pink;
+}
+/* 0-1-1 */
+article.joe {
+  color: brown;
+}
+/* 0-1-2 */
+p:first-of-type + p {
+  text-transform: uppercase;
+}
+/* 0-1-2 */
+p:nth-of-type(2) > sub {
+  visibility: hidden;
+}
+/* 0-0-2 */
+p::first-line {
+  color: blue;
+}
+/* 0-0-2 */
+h1::after, h1::before {
+  content: ' ☕️ ';
+}
+/* 0-0-2 */
+sup::after {
+  content: '😃';
+}
+/* 0-0-2 */
+p > sup {
+  background-color: orange;
+  font-weight: bold;
+}
+/* 0-1-1 -- why doesn't this one work??? */
+p:last-child {
+  color: green;
+}
+
+
+
+
+/* basic styling, ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}

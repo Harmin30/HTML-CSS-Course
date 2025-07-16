@@ -1,0 +1,68 @@
+/* specificity 0-0-1, but !important beats everything else in the cascade. You must place !important after every declaration to "work" */
+p {
+  color: rebeccapurple !important;
+  font-family: 'Water Brush', cursive !important;
+}
+/* specificity 0-0-1, but the cascade says animations take priority */
+p {
+  animation: font 0s forwards;
+}
+
+@keyframes font {to{color: teal; font-family: 'Spline Sans Mono', monospace; }}
+
+/* specificity 4-0-0 */
+#femID:is(#femID, #bla#bla) {
+  color: hotpink;
+  font-family: 'Rubik Puddles', cursive;
+}
+/* specificity 2-0-0 */
+#femID#femID {
+  color: salmon;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/* specificity 1-1-0 */
+.femClass#femID {
+  color: dodgerblue;
+  font-family: 'Palette Mosaic', cursive;
+}
+/* specificity 1-0-1 */
+p#femID {
+  color: fuchsia;
+  font-family: 'Mea Culpa', cursive;
+}
+/* specificity 1-0-0 */
+#femID {
+  color: brown;
+  font-family: 'Major Mono Display', monospace;
+}
+/* specificity 0-2-0 */
+.femClass.femClass {
+  color: orange;
+  font-family: 'Lobster', cursive;
+}
+/* specificity 0-1-1 */
+p.femClass {
+  color: green;
+  font-family: 'Joan', serif;
+}
+/* specificity 0-1-0 */
+.femClass {
+  color: mediumorchid;
+  font-family: 'Faster One', cursive;
+}
+/* specificity 0-0-1 */
+p {
+  color: red;
+  font-family: 'Covered By Your Grace', cursive;
+}
+/* specificity 0-0-0 */
+:where(p) {
+  color: blue;
+  font-family: 'Barrio', cursive;
+}
+
+
+
+p {
+  font-size: 3rem;
+}

@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid red;
+}
+img {
+  max-width: 100%;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+article {
+  display: flow-root;
+}
+/* img, .cloud {
+  visibility: hidden;
+} */
+a:any-link {
+  color: red;
+}
+a:hover {
+  text-decoration: none;
+}
