@@ -103,11 +103,13 @@ nav {
 .navicons svg {
     fill: #000;
     transition: transform 0.2s ease;
+    text-decoration: underline;
 }
 
 .navicons li:hover svg {
     transform: scale(1.1);
     fill: #ffb300;
+    
 }
 
 /* === Hero Section === */
@@ -356,6 +358,50 @@ figcaption {
     max-width: 145px;
 
 }
+.button-group {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 10px; */
+  margin-top: 10px;
+  justify-content: center;
+  /* font-size: 1rem; */
+  margin: auto;
+  gap: .5rem;
+  align-items: center;
+}
+
+.add-to-cart-btn{
+
+    padding: 0.5rem;
+    max-width: fit-content;
+    display: flex;
+    border-radius: 6px; 
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.buy-button{
+
+    padding: 0.5rem;
+    max-width: fit-content;
+    display: flex;
+    border-radius: 6px; 
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.wishlist-button{
+
+    padding: 0.5rem;
+    max-width: fit-content;
+    display: flex;
+    border-radius: 6px; 
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+
 
 /* Hover effect for buttons */
 .product-options button:hover {
