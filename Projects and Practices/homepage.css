@@ -22,20 +22,12 @@ body {
     background-color: whitesmoke;
 }
 
+
 /* === Navbar Styles === */
 /* === Hamburger Button Styles === */
 .hamburger {
     display: none;
-    /* flex-direction: column; */
-    gap: 1.5rem;
-    cursor: pointer;
-    margin: auto;
-}
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
 }
 
 .navbar,
@@ -50,11 +42,19 @@ body {
     /* Show when toggled */
 }
 
+.mobile-menu {
+    display: flex;
+    /* justify-content: space-between; */
+    margin: auto;
+    width: 100%;
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
     padding: 1rem;
     background-color: #fff3e3;
     width: 100%;
@@ -75,7 +75,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    margin:auto;
 }
 
 .navbar a {
@@ -94,11 +94,10 @@ nav {
     display: flex;
     list-style: none;
     gap: 1.2rem;
-    align-items: center;
-    justify-content: space-around;
-    /* margin-right: 1rem; */
-    padding: 0;
-    margin: 0;
+
+}
+.navicons ul{
+    margin:2rem;
 }
 
 .navicons svg {
@@ -139,7 +138,7 @@ nav {
     max-width: 90%;
     /* border: 1px solid #bb8e29; */
     box-shadow: 12px 14px 10px 3px rgba(0, 0, 0, 0.2);
-    
+
 }
 
 h3 {
@@ -252,17 +251,26 @@ figcaption {
     padding-left: 2rem;
 
 }
+.productgrid h4 {
+    /* background-color: aliceblue */
+
+}
+.productgrid p {
+/* background-color: aliceblue; */
+}
 
 .productgrid img {
     width: 100%;
-    /* border-radius: 10px; */
+    border: none;
+    background-color: rgb(218, 218, 218);
 
 }
 
 .productgrid div {
     /* border: 1px solid black; */
     /* border-radius: 10px; */
-    background-color: rgb(218, 218, 218);
+    /* background-color: rgb(218, 218, 218); */
+
 
 
 }
@@ -601,42 +609,75 @@ figcaption {
 /* 📱 Tablet (<= 768px) */
 @media (max-width: 768px) {
     nav {
+        /* display: block; */
         flex-direction: row;
         gap: 1rem;
         margin: auto;
     }
 
-    /* .hamburger {
-        display: block;
-    } */
-
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        /* width: 100%; */
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
+    h2 {
         margin: auto;
-        padding-left: 1.2rem;
-        /* position: absolute; */
+    }
 
+    .hamburger {
+        display: block;
+        transform: scale(1, 1);
+
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 69px;
+        right: 0;
+        width: 30%;
+        /* adjust width as needed */
+        height: auto;
+        background: #f5f5f5;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin: auto;
+
+        transform: translateX(100%);
+        /* Start hidden to the right */
+        transition: transform 0.4s ease-in-out;
+    }
+
+
+    .mobile-menu.show {
+        transform: translateX(0);
+        /* Slide into view */
+    }
+
+
+    .navbar,
+    .navicons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar li,
+    .navicons li {
+        list-style: none;
+        text-align: center;
+        width: 100%;
     }
 
     .navbar a {
-        font-size: 1rem;
-    }
-
-    .navicons {
-        justify-content: center;
-        margin: 1rem auto;
-        gap: 1rem;
-
-    }
-
-    .navicons li {
-        margin: 0;
-        padding: 0;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #333;
+        display: block;
+        padding: 0.5rem;
     }
 
     .grid,
@@ -665,16 +706,17 @@ figcaption {
         text-align: start;
         border-radius: 0.4rem
     } */
-         .container {
+    .container {
         width: 100%;
         max-width: 100%;
         height: 40.3%;
         /* top: 125%; */
-        transform: translate(-61.9%, 15.9rem);
+        transform: translate(-61.9%, 13.5rem);
         /* background-color: rgb(173, 41, 41); */
         background-color: whitesmoke;
         border: none;
         padding: 0.5rem;
+        box-shadow: none;
     }
 
     .container h4 {
@@ -698,7 +740,8 @@ figcaption {
         width: 15%;
         /* border-radius: 0.4rem; */
     }
-    .browse{
+
+    .browse {
         margin-top: 12.9rem;
     }
 
@@ -846,7 +889,7 @@ figcaption {
         height: auto;
 
     }
-    
+
 
     .grid,
     .productgrid {
@@ -896,7 +939,8 @@ figcaption {
         width: 20%;
         /* border-radius: 0.3rem; */
     }
-    .browse{
+
+    .browse {
         margin-top: 10rem;
     }
 
@@ -1067,7 +1111,7 @@ figcaption {
     .container h4 {
         font-size: 0.6rem;
         padding-top: 0.2rem;
-        
+
     }
 
     .container h3 {
@@ -1083,7 +1127,7 @@ figcaption {
     .container button {
         font-size: 0.67rem;
         padding: 0.34rem;
-        margin-top:0.2rem;
+        margin-top: 0.2rem;
         width: 20%;
         /* border-radius: 0.3rem; */
     }
@@ -1235,7 +1279,7 @@ figcaption {
         transform: translate(-50%, -50%);
         text-align: start;
     } */
-         .container {
+    .container {
         width: 100%;
         max-width: 100%;
         height: 50.3%;
@@ -1271,10 +1315,12 @@ figcaption {
         width: 20%;
         /* border-radius: 0.3rem;
          */
-         border: none;
+        border: none;
     }
-    .browse{
-        margin-top: 7.5rem;}
+
+    .browse {
+        margin-top: 7.5rem;
+    }
 
     .browse h2 {
         font-size: 1rem;
