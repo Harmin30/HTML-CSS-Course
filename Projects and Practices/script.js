@@ -12,7 +12,8 @@ const productGrid = document.getElementById("productGrid");
 //await  = pauses the function until a promise is resolved , await tells js : "wait here until the response comes back"
 
 function addToCart(product){
-  let cart = JSON.parse(localStorage.getItem("cart") || []);
+let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
 
   const exists = cart.find(item => item.id === product.id);
   if(exists){
@@ -28,11 +29,29 @@ function addToCart(product){
 
 }
 
+function addToWishList(product){
+let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+
+
+  const exists = wishlist.find(item => item.id === product.id);
+  if(exists){
+    alert("Item already in Wishlist!")
+    return;
+  }
+  wishlist.push(product);
+
+  localStorage.setItem("wishlist",JSON.stringify(wishlist));
+
+  alert("item added to wishlist")
+
+
+}
+
 
 async function fetchFurnitureProducts() {
   try {
-    const response = await fetch("https://dummyjson.com/products/category/furniture");
-    // const response = await fetch(" https://dummyjson.com/products");
+    // const response = await fetch("https://dummyjson.com/products/category/furniture");
+    const response = await fetch("https://dummyjson.com/products?limit=100");
     const data = await response.json();
     // const data2 = await response2.json();
 
